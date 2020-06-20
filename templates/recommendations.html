@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+
+*{
+margin:0;
+padding:0;
+font-family: "Lato", sans-serif;
+}
+
+.testimonials{
+padding: 40px 0;
+background:rgb(240,240,240);
+color:#434343;
+text-align:center;
+}
+
+.inner{
+max-width:1200px;
+margin:auto;
+overflow:hidden;
+padding: 0 20px;
+}
+
+.border{
+width:160px;
+height:5px;
+background:#6ab04c;
+margin:26px auto;
+}
+
+.row{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.col{
+flex:33.33%;
+max-width:33.33%;
+box-sizing:border-box;
+padding:15px;
+}
+
+.testimonial{
+background: #fff;
+padding: 30px;
+}
+
+.testimonial img{
+width: 100px;
+height:100px;
+border-radius:50%;
+}
+
+.name{
+font-size:20px;
+text-transform: uppercase;
+margin: 20px 0;
+}
+
+.stars{
+color: #6ab04c;
+margin-bottom:20px;
+}
+
+@media screen and (max-width:960px){
+.col{
+flex:100%;
+max-width:80%;
+}
+}
+
+@media screen and (max-width:600px){
+.col{
+flex:100%;
+max-width:100%;
+}
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: hsl(210, 90%, 10%);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  font-size: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: hsl(145, 50%, 65%);
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: hsl(145, 50%, 65%);
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+  background-color: rgb(240,240,240);
+}
+div.search {
+  background-color: rgb(240,240,240);
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 3px solid black;
+  float: left;
+  width: 70%;
+  background: rgb(255, 255, 255);
+margin-top: 40px;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 17px;
+  border: 3px solid black;
+  border-right: none;
+  cursor: pointer;
+ margin-right: 20px;
+  margin-top: 40px;
+}
+
+form.example button:hover {
+  background: rgb(60,60,60);
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/ff302870d7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="sidebar">
+  <a href="/search"><B>Search</B></a>
+  <a href="/reminder"><b>Reminder</b></a>
+  <a class="active" href="/recommendations"><b>Recommendations</b></a>
+  <a ><b>Hello {{username}}</b></a>
+</div>
+
+<div class="testimonials">
+ <div class="inner">
+  <h1>RECOMMENDED FOR YOU</h1>
+   <div class="border"></div>
+   
+     <div class="row">
+      <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+
+     <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+
+     <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="testimonials">
+ <div class="inner">
+  <h1>TRENDING</h1>
+   <div class="border"></div>
+   
+     <div class="row">
+      <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+
+     <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+
+     <div class="col">
+ <div class="testimonial">
+<img src="./loginpic.jpg" alt="show1">
+<div class="name">Full Name</div>
+<div class="stars">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+<i class="far fa-star"></i>
+</div>
+<p>Lorem Ipsum is simply dummy text of the 
+printing and typesetting industry. Lorem 
+Ipsum has been the industry's standard dummy 
+text ever since the 1500s, when an unknown printer 
+took a galley of type and scrambled it to make a
+ type specimen book.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

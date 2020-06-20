@@ -19,10 +19,10 @@ def validate(username, password):
     return completion
 
 def writeout(wordlist,user):
-    file = open("recommendatio_files/static/global.txt","a+") 
+    file = open("static/recommendation_files/global.txt","a+") 
     file.write(wordlist+"\n")
     file.close()
-    path="recommendatio_files/static/" + user +".txt"
+    path="static/recommendation_files/" + user +".txt"
     file= open(path,"a+")
     file.write(wordlist+"\n")
     file.close()
