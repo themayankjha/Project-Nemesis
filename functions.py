@@ -16,5 +16,13 @@ def validate(username, password):
                     dbPass = row[1]
                     if dbUser==username:
                         completion=check_password(dbPass, password)
-    #validatelist=[completion,username]
     return completion
+
+def writeout(wordlist,user):
+    file = open("recommendatio_files/static/global.txt","a+") 
+    file.write(wordlist+"\n")
+    file.close()
+    path="recommendatio_files/static/" + user +".txt"
+    file= open(path,"a+")
+    file.write(wordlist+"\n")
+    file.close()

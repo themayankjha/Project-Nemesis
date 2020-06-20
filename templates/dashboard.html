@@ -1,9 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+
+
+*{
+margin:0;
+padding:0;
+font-family: "Lato", sans-serif;
+}
+
+.testimonials{
+padding: 40px 0;
+background:rgb(240,240,240);
+color:#434343;
+text-align:center;
+}
+
+.inner{
+max-width:1200px;
+margin:auto;
+overflow:hidden;
+padding: 0 20px;
+}
+
+.border{
+width:160px;
+height:5px;
+background:#6ab04c;
+margin:26px auto;
+}
+
+.row{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.col{
+flex:33.33%;
+max-width:33.33%;
+box-sizing:border-box;
+padding:15px;
+}
+
+.testimonial{
+background: #fff;
+padding: 30px;
+}
+
+.testimonial img{
+width: 100px;
+height:100px;
+border-radius:50%;
+}
+
+.name{
+font-size:20px;
+text-transform: uppercase;
+margin: 20px 0;
+}
+
+.stars{
+color: #6ab04c;
+margin-bottom:20px;
+}
+
+@media screen and (max-width:960px){
+.col{
+flex:100%;
+max-width:80%;
+}
+}
+
+@media screen and (max-width:600px){
+.col{
+flex:100%;
+max-width:100%;
+}
+}
+
+
+
+
+
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -105,23 +187,56 @@ form.example::after {
 
 
 </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/ff302870d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
 <div class="sidebar">
- 
   <a href="#search"><B>SEARCH</B></a>
   <a href="#account"><b>ACCOUNT INFO</b></a>
   <a href="#reminder"><b>REMINDER</b></a>
+  <a href="#user"><b>{{username}}</b></a>
 </div>
 <div class="search">
-<form class="example" action="/action_page.php" style="margin:auto; max-width:400px;">
-  <input type="text" placeholder="Search.." name="search2">
+<form class="example" action="/dashboard" method="post" style="margin:auto; max-width:400px;">
+  <input type="text" placeholder="Search.." name="search" required value="{{  request.form.search  }}">
   <button type="submit"><i class="fa fa-search"></i></button>
 </form>
 </div>
 <div class="content">
-  Hello <p>Message: {{messages}}</p>
+  <div class="testimonials">
+    <div class="inner">
+      {% if searches['searchlength'] == None %}
+      <h1> Search here to watch your favorite shows </h1>
+      <div class="border"></div>
+      {% else %}
+      <h1>{{searches['searchlength']}} Shows Found</h1>
+      <div class="border"></div>
+      <div class="row">
+        {% for value in searches['showname'] %}
+        <div class="col">
+          <div class="testimonial">
+         <img src="{{ searches['images'][loop.index0] }}" alt="show1">
+         <div class="name">{{value}}</div>
+         <div class="stars">
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="far fa-star"></i>
+         <i class="far fa-star"></i>
+         <i class="far fa-star"></i>
+         </div>
+         <p style="text-align:center;">{{ searches['desc'][loop.index0] }}</p>
+         <h5>{{ searches['timings'][loop.index0] }}</h4>
+         <h5>{{ searches['genre_chname'][loop.index0] }}</h5>
+         <h3>{{ searches['ch_number'][loop.index0] }}</h3>
+         </div>
+         </div>
+        
+   {% endfor %}
+  </div>
+      {% endif %}
+   </div>
 </div>
 </body>
 </html>
