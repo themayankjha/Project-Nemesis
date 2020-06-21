@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request, g,json,session
-from functions import validate, writeout
+from functions import validate, writeout,writetime
 import searchfunc
 import reminderengine
 import recommendationengine
@@ -46,6 +46,7 @@ def reminder():
         setdate = request.form['setdate']
         settime = request.form['settime']
         writeout(show,username)
+        writetime(settime)
         remstatus   =  reminderengine.setreminder(show,setdate,settime)
         reminders   =  reminderengine.getreminder(username)
     return render_template('reminder.html', username=username, reminders=reminders , remstatus=remstatus)  

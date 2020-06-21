@@ -268,69 +268,18 @@ took a galley of type and scrambled it to make a
 
 <div class="testimonials">
  <div class="inner">
-  <h1>TRENDING</h1>
+  <h1>Most Popular</h1>
    <div class="border"></div>
-   
      <div class="row">
-      <div class="col">
- <div class="testimonial">
-<img src="./loginpic.jpg" alt="show1">
-<div class="name">Full Name</div>
-<div class="stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="far fa-star"></i>
-</div>
-<p>Lorem Ipsum is simply dummy text of the 
-printing and typesetting industry. Lorem 
-Ipsum has been the industry's standard dummy 
-text ever since the 1500s, when an unknown printer 
-took a galley of type and scrambled it to make a
- type specimen book.</p>
-</div>
-</div>
-
-     <div class="col">
- <div class="testimonial">
-<img src="./loginpic.jpg" alt="show1">
-<div class="name">Full Name</div>
-<div class="stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="far fa-star"></i>
-<i class="far fa-star"></i>
-</div>
-<p>Lorem Ipsum is simply dummy text of the 
-printing and typesetting industry. Lorem 
-Ipsum has been the industry's standard dummy 
-text ever since the 1500s, when an unknown printer 
-took a galley of type and scrambled it to make a
- type specimen book.</p>
-</div>
-</div>
-
-     <div class="col">
- <div class="testimonial">
-<img src="./loginpic.jpg" alt="show1">
-<div class="name">Full Name</div>
-<div class="stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="far fa-star"></i>
-<i class="far fa-star"></i>
-<i class="far fa-star"></i>
-</div>
-<p>Lorem Ipsum is simply dummy text of the 
-printing and typesetting industry. Lorem 
-Ipsum has been the industry's standard dummy 
-text ever since the 1500s, when an unknown printer 
-took a galley of type and scrambled it to make a
- type specimen book.</p>
-</div>
-</div>
+      {% for values in globalrecommendations %}
+        <div class="col">
+          <div class="testimonial">
+         <div class="name">{{values[0]}}</div>
+         <h3>Searches and Reminders : {{ values[1] }}</h3>
+         </div>
+         </div>
+        
+   {% endfor %}
 </div>
 </div>
 </div>

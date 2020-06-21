@@ -26,3 +26,7 @@ def writeout(wordlist,user):
     file= open(path,"a+")
     file.write(wordlist+"\n")
     file.close()
+def writetime(time):
+    file = open("static/recommendation_files/timings.txt","a+") 
+    file.write(time+"\n")
+    file.close()
