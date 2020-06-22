@@ -6,6 +6,6 @@ A website through which people can set reminders to search and watch a particula
 A reccomendation system based on user viewings and the most popular searches was also created.
 
 # Testing
-Testing Username :- mayank
+Username :- mayank
 
 Password : password
